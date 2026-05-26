@@ -1,10 +1,14 @@
 import "@/global.css";
 import { Link } from "expo-router";
 import { Text, View, Pressable } from "react-native";
+import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
+import {styled} from "nativewind";
+const SafeAreaView = styled(RNSafeAreaView);
+
 
 export default function App() {
   return (
-    <View className="flex-1 items-center bg-white pt-20 gap-4">
+    <SafeAreaView className="flex-1 items-center bg-white pt-20 gap-4">
       <Text className="text-xl font-bold text-blue-500">
         welcome to react native
       </Text>
@@ -60,6 +64,6 @@ export default function App() {
           </Text>
         </Pressable>
       </Link>
-    </View>
+    </SafeAreaView>
   );
 }
